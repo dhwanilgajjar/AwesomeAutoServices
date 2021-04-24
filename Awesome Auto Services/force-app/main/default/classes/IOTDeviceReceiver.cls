@@ -4,6 +4,7 @@ global class IOTDeviceReceiver
     @HttpPut
     global static void setReading()
     {
+        // receiving data from IOT Device
         RestRequest request = RestContext.request;
         Map<String,String> header = request.headers;
         Id vehicleId = (Id)header.get('vehicleId');
